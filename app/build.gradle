@@ -24,7 +24,7 @@ android {
 
 dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     // Koin for Android
     implementation "org.koin:koin-android:0.9.3"
 

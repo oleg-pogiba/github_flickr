@@ -17,5 +17,4 @@ class MainPresenter(
     override fun detachView() {
         this.view = null
     }
-
 }

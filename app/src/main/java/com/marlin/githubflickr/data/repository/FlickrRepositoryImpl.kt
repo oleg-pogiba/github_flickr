@@ -1,5 +1,7 @@
 package com.marlin.githubflickr.data.repository
 
-class FlickrRepositoryImpl: FlickrRepository{
+import com.marlin.githubflickr.data.api.FlickrService
+
+class FlickrRepositoryImpl(val flickrService: FlickrService) : FlickrRepository {
 
 }

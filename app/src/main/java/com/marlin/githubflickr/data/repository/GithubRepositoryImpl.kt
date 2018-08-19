@@ -1,4 +1,7 @@
 package com.marlin.githubflickr.data.repository
 
-class GithubRepositoryImpl: GithubRepository {
+import com.marlin.githubflickr.data.api.GitHubService
+
+class GithubRepositoryImpl(val gitHubService : GitHubService): GithubRepository {
+
 }
