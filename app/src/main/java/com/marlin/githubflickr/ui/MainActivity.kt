@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         super.onStart()
         presenter.attachView(this)
         greeting.setText("Hello world :-)")
+        presenter.getCombinedList()
     }
 
     override fun onStop() {
