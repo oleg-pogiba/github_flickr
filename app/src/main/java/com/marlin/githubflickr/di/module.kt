@@ -1,5 +1,6 @@
 package com.marlin.githubflickr.di
 
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.experimental.CoroutineCallAdapterFactory
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.marlin.githubflickr.data.api.FlickrService
 import com.marlin.githubflickr.data.api.GitHubService
@@ -42,7 +43,8 @@ fun provideGitHubService(client: OkHttpClient): GitHubService {
     val retrofit = Retrofit.Builder()
             .baseUrl("https://api.github.com")
             .client(client)
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            //.addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

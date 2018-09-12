@@ -6,10 +6,10 @@ interface MainContract {
     interface Presenter {
         fun attachView(view: MainContract.View)
         fun detachView()
-        fun getCombinedList(): List<CombinedData>
+        fun initData()
     }
 
     interface View {
-
+        fun setContent(content:String)
     }
 }
